@@ -122,17 +122,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-/*
-** My bonus
-*/
-
-size_t	ft_abs(int nb);
-int		ft_nbrlen_base(int n, int len_base);
-int		ft_isspace2(int c);
-void	ft_puttab_fd(char **tab, char *sep, int fd);
-
-void	ft_lstadd_read(t_read **alst, t_read *new_list);
-t_read	*ft_lstnew_read(char *str, int rd);
-char	*ft_read_file(int fd);
-
 #endif
