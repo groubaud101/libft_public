@@ -1,2 +1,2 @@
-# libft_public
-19 Bruxelles, 42 school, first project libft
+# libft
+libft - école 19 - 42 Bruxelles - year 2021
