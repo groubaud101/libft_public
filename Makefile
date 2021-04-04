@@ -69,6 +69,12 @@ fclean	:	clean
 
 re		:	fclean all
 
+so		:
+			@${CC} -fPIC -c ${FLAGS} ${SRCS} ${BONUS} -I ${DIR_H}
+			@${CC} -shared -o libft.so ${OBJS} ${OBJS_B}
+			@printf " _____________________________________\n"
+			@printf "|___ Libft.so successfully created ___|\n\n"
+
 test	:	bonus
 			$(CC) $(FLAGS) $(SRCT) -I $(DIR_H) -L $(DIR_LIB) -lft
 			@echo "TEST :\n"

@@ -18,3 +18,22 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+
+/*
+#include <ctype.h>
+#include <stdio.h>
+
+int main()
+{
+	int i = -1;
+
+	while (i < 340)
+	{
+		if ((isalnum(i) == 0 && ft_isalnum(i)) || (isalnum(i) && ft_isalnum(i) == 0))
+		{
+			printf("i : %i, sys : |%i| ft : |%i|\n", i, isalnum(i), ft_isalnum(i));
+			printf("isalpha : %i, isdigit : %i\n\n", isalpha(i), isdigit(i));
+		}
+		i++;
+	}
+}*/
