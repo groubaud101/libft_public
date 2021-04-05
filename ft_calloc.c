@@ -15,18 +15,16 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*array;
-	size_t	index;
+	char				*array;
+	size_t				index;
+	unsigned long long	mult;
 
 	index = 0;
-	if (nmemb <= 0 || size <= 0)
-		return (NULL);
-	if (nmemb * size > 2147483647)
-		return (NULL);
-	array = (char *)malloc(nmemb * size);
+	mult = nmemb * size;
+	array = (char *)malloc(mult);
 	if (array == NULL)
 		return (NULL);
-	while (index < (nmemb * size))
+	while (index < mult)
 		array[index++] = 0;
 	return ((void *)array);
 }

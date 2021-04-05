@@ -48,7 +48,7 @@ static char	**ft_free_tab(char **tab, int len)
 	return (NULL);
 }
 
-static char	**ft_split2(char const *s, char c, char **tab)
+static char	**ft_split_two(char const *s, char c, char **tab)
 {
 	int		index;
 	int		len;
@@ -77,12 +77,14 @@ char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 
+	if (!s)
+		return (NULL);
 	tab = (char **)malloc(sizeof(*tab) * (ft_count_word(s, c) + 1));
 	if (!tab)
 		return (NULL);
 	while (*s && *s == c)
 		s++;
-	tab = ft_split2(s, c, tab);
+	tab = ft_split_two(s, c, tab);
 	if (!tab)
 		return (NULL);
 	return (tab);

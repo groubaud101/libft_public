@@ -13,6 +13,23 @@
 #include <stdlib.h>
 #include "libft.h"
 
+char	*is_there_null(char const *s1, char const *s2)
+{
+	char	*dest;
+
+	if (s1)
+	{
+		dest = ft_strdup(s1);
+		return (dest);
+	}
+	else if (s2)
+	{
+		dest = ft_strdup(s2);
+		return (dest);
+	}
+	return (NULL);
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dest;
@@ -20,6 +37,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len_s1;
 	int		len_s2;
 
+	if (!s1 || !s2)
+		return (is_there_null(s1, s2));
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	dlen = len_s1 + len_s2;

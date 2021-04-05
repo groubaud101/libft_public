@@ -59,6 +59,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*trim;
 	int		len;
 
+	if (!s1 || !set)
+		return (NULL);
 	len = ft_strlentrim(s1, set);
 	trim = (char *)ft_calloc(sizeof(*trim), len + 1);
 	if (!trim)

@@ -15,7 +15,6 @@
 
 static int	ft_isspace(int c)
 {
-	c = c % 256;
 	if (c == '\f' || c == '\n' || c == '\r' || c == '\t' || c == '\v'
 		|| c == ' ')
 		return (1);
@@ -40,15 +39,15 @@ static int	ft_check_atoi(const char *nbr)
 
 int	ft_atoi(const char *nbr)
 {
-	int	index;
-	int	nb;
-	int	mult;
+	int		index;
+	long	nb;
+	long	mult;
 
 	index = 0;
 	nb = 0;
 	mult = 1;
 	if (ft_check_atoi(nbr) == 0)
-		return (ATOI_ERROR);
+		return ((int)ATOI_ERROR);
 	while (ft_isspace(nbr[index]) == 1)
 		index++;
 	if (nbr[index] == '+' || nbr[index] == '-')
@@ -63,6 +62,6 @@ int	ft_atoi(const char *nbr)
 		index--;
 	}
 	if (index >= 0 && nbr[index] == '-')
-		return (-nb);
-	return (nb);
+		return (-(int)nb);
+	return ((int)nb);
 }

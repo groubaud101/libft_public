@@ -16,7 +16,9 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*lst;
 
-	if (alst && *alst)
+	if (!alst)
+		return ;
+	if (*alst)
 	{
 		lst = *alst;
 		while (lst->next)
