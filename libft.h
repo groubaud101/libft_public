@@ -4,9 +4,6 @@
 # include <string.h>
 
 # define ATOI_ERROR 0
-# ifndef BUFF
-#  define BUFF 11
-# endif
 
 typedef struct s_list
 {

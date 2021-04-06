@@ -14,7 +14,7 @@ void	test_mandatory_part1(int n)
 		if (test_bzero() == 1)
 			printf("TEST_BZERO COMPLETE\n\n");
 	}
-/*	if (n == 3 || n == 0 || n == -1)
+	if (n == 3 || n == 0 || n == -1)
 	{
 		printf("TEST_MEMCPY\n");
 		if (test_memcpy() == 1)
@@ -44,7 +44,7 @@ void	test_mandatory_part1(int n)
 		if (test_memcmp() == 1)
 			printf("TEST_MEMCMP COMPLETE\n\n");
 	}
-*/	if (n == 8 || n == 0 || n == -2)
+	if (n == 8 || n == 0 || n == -2)
 	{
 		printf("TEST_STRLEN\n");
 		if (test_strlen() == 1)
@@ -202,18 +202,12 @@ void	test_bonus_list(int n)
 		if (test_chain_lst() == 1)
 			printf("TEST_CHAIN_LST COMPLETE\n\n");
 	}
-	if (n == 2 || n == 0)
-	{
-		printf("TEST_READ\n");
-		if (test_read() == 1)
-			printf("TEST_READ COMPLETE\n\n");
-	}
 }
 
 int		main(void)
 {
-	test_mandatory_part1(0);
-	test_mandatory_part2(0);
-	test_bonus_list(0);
+	test_mandatory_part1(22);
+	// test_mandatory_part2(0);
+	// test_bonus_list(0);
 
 }

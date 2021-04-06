@@ -18,9 +18,9 @@ char	*ft_strrchr(const char *s, int c)
 	size_t			len;
 	unsigned char	my_c;
 
-	len = ft_strlen(s);
 	if (c == -1)
 		return (NULL);
+	len = ft_strlen(s);
 	my_c = (unsigned char)c;
 	if (s[len] == my_c)
 		return ((char *)s + len);

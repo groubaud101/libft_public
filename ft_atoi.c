@@ -54,12 +54,10 @@ int	ft_atoi(const char *nbr)
 		index++;
 	while (ft_isdigit(nbr[index]) == 1)
 		index++;
-	index--;
-	while (index >= 0 && ft_isdigit(nbr[index]) == 1)
+	while (--index >= 0 && ft_isdigit(nbr[index]) == 1)
 	{
 		nb = (nbr[index] - '0') * mult + nb;
 		mult *= 10;
-		index--;
 	}
 	if (index >= 0 && nbr[index] == '-')
 		return (-(int)nb);
