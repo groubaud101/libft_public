@@ -16,7 +16,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	size_t			index;
 	char			*tmp;
-	char			*tmp2;
+	const char		*tmp2;
 	unsigned char	my_c;
 
 	my_c = (unsigned char)c;
@@ -24,7 +24,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	if (n == 0)
 		return (NULL);
 	tmp = (char *)dest;
-	tmp2 = (char *)src;
+	tmp2 = (const char *)src;
 	while (index < n)
 	{
 		tmp[index] = tmp2[index];
