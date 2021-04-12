@@ -22,6 +22,7 @@ int		test_memcpy(void)
 	ft_putbyte("ft_memcpy : |", dest2, len);
 	free(src1);
 	free(src2);
+
 /*
 	src1 = strdup("Hello World!");
 	src2 = strdup("Hello World!");

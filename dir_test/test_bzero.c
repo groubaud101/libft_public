@@ -7,6 +7,12 @@ int		test_bzero(void)
 	size_t	n;
 	size_t	len;
 
+	src1 = NULL;
+	src2 = NULL;
+	bzero(src1, 1);
+	printf("coucou\n");
+	ft_bzero(src2, 1);
+
 	src1 = strdup("Hello World!");
 	src2 = strdup("Hello World!");
 	n = 3;

@@ -10,14 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char				*array;
-	size_t				index;
-	unsigned long long	mult;
+	char	*array;
+	size_t	index;
+	size_t	mult;
 
 	index = 0;
 	mult = nmemb * size;

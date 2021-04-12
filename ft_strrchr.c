@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -18,16 +17,12 @@ char	*ft_strrchr(const char *s, int c)
 	size_t			len;
 	unsigned char	my_c;
 
-	if (c == -1)
-		return (NULL);
 	len = ft_strlen(s);
 	my_c = (unsigned char)c;
 	if (s[len] == my_c)
 		return ((char *)s + len);
-	while (len-- > 0)
+	while (len--)
 		if (s[len] == my_c)
 			return ((char *)s + len);
-	if (s[len] == my_c)
-		return ((char *)s + len);
 	return (NULL);
 }

@@ -10,12 +10,21 @@ int		test_strrchr(void)
 	char	*s2;
 	char	*result2;
 
-	c = 'l';
+	c = 'H';
 	s1 = strdup("Hello World!");
 	s2 = strdup("Hello World!");
 	result1 = strrchr(s1, c);
 	result2 = ft_strrchr(s2, c);
 	printf("c(%i) : |%c|\ns1 : |%s|\ns2 : |%s|\n   strrchr : |%s|\nft_strrchr : |%s|\n",
+			c, c, s1, s2, result1, result2);
+	test_free(s1, s2, 0, 0);
+
+	c = 'l';
+	s1 = strdup("Hello World!");
+	s2 = strdup("Hello World!");
+	result1 = strrchr(s1, c);
+	result2 = ft_strrchr(s2, c);
+	printf("\nc(%i) : |%c|\ns1 : |%s|\ns2 : |%s|\n   strrchr : |%s|\nft_strrchr : |%s|\n",
 			c, c, s1, s2, result1, result2);
 	test_free(s1, s2, 0, 0);
 
