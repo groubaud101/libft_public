@@ -71,10 +71,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (ft_isinstr(s1[index], set) == 1)
 		index++;
 	while (jndex < len)
-	{
-		trim[jndex] = s1[index];
-		jndex++;
-		index++;
-	}
+		trim[jndex++] = s1[index++];
 	return (trim);
 }

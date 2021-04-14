@@ -206,7 +206,7 @@ void	test_bonus_list(int n)
 
 int		main(void)
 {
-	test_mandatory_part1(21);
+	test_mandatory_part1(22);
 	// test_mandatory_part2(0);
 	// test_bonus_list(0);
 
