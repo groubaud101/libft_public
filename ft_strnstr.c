@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	if (*needle == 0)
 		return ((char *)haystack);
 	index = 0;
-	while (index < n && *haystack)
+	while (index < n && haystack[index])
 	{
 		jndex = 0;
 		while (haystack[jndex + index] == needle[jndex] && needle[jndex]
