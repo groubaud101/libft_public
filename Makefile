@@ -42,8 +42,7 @@ FLAGS	=	-Wall -Wextra -Werror
 OBJS	=	$(SRCS:.c=.o)
 OBJS_B	=	$(BONUS:.c=.o)
 
-LIB		=	ar rcs $(NAME) $(OBJS)
-LIB_B	=	ar rcs $(NAME) $(OBJS) $(OBJS_B)
+LIB		=	ar rcs
 
 ## partie de test
 
@@ -53,13 +52,16 @@ SRCT	=	$(addprefix $(DIR_T), $(SRC_T))
 
 ## commande
 
-all		:	$(NAME)
-
-bonus	:	$(OBJS_B) $(OBJS)
-			$(LIB_B)
+.c.o	:	$(SRCS)
+			$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME)	:	$(OBJS)
-			$(LIB)
+			$(LIB) $@ $^
+
+bonus	:	$(OBJS_B)
+			$(LIB) $(NAME) $^
+
+all		:	$(NAME)
 
 clean	:
 			rm -rf $(OBJS) $(OBJS_B)
@@ -80,4 +82,4 @@ test	:	bonus
 			@echo "TEST :\n"
 			@./a.out
 
-.PHONY	:	all $(NAME) clean fclean re bonus test
+.PHONY	:	all clean fclean re bonus test
