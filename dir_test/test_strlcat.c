@@ -16,5 +16,14 @@ int		test_strlcat(void)
 	printf("\ndest : |%s|\nr : |%i|\n", dest, r);
 	test_free(dest, str, 0, 0);	
 
+	dest = malloc(30);
+	memset(dest, 'r', 15);
+	r = ft_strlcat(dest, "lorem ipsum dolor sit amet", 5);
+	write(1, "\ndest : |", 9);
+	write(1, dest, 15);
+	write(1, "|\n", 2);
+	printf("r : |%i|\n", r);
+	free(dest);
+
 	return (1);
 }

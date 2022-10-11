@@ -20,12 +20,12 @@ void	test_mandatory_part1(int n)
 		if (test_memcpy() == 1)
 			printf("TEST_MEMCPY COMPLETE\n\n");
 	}
-	if (n == 4 || n == 0 || n == -1)
-	{
-		printf("TEST_MEMCCPY\n");
-		if (test_memccpy() == 1)
-			printf("TEST_MEMCCPY COMPLETE\n\n");
-	}
+	// if (n == 4 || n == 0 || n == -1)
+	// {
+	// 	printf("TEST_MEMCCPY\n");
+	// 	if (test_memccpy() == 1)
+	// 		printf("TEST_MEMCCPY COMPLETE\n\n");
+	// }
 	if (n == 5 || n == 0 || n == -1)
 	{
 		printf("TEST_MEMMOVE\n");
@@ -206,7 +206,7 @@ void	test_bonus_list(int n)
 
 int		main(void)
 {
-	test_mandatory_part1(22);
+	test_mandatory_part1(20);
 	// test_mandatory_part2(0);
 	// test_bonus_list(0);
 

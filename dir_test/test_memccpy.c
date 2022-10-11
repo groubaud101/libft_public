@@ -1,7 +1,7 @@
 #include "test_lib.h"
 
 // void *memccpy(void *dest, const void *src, int c, size_t n);
-
+/*
 int		test_memccpy(void)
 {
 	char	*dest1;
@@ -127,3 +127,4 @@ int		test_memccpy(void)
 
 	return (1);
 }
+*/
